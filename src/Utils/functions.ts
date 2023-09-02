@@ -151,6 +151,7 @@ const mappedMovie = (media: any) => {
 		releaseDate: media.release_date,
 		genres: media.genre_ids,
 		poster: media.poster_path,
+		stars: media.vote_average,
 		type: media.media_type || 'movie',
 	};
 };
@@ -163,6 +164,7 @@ const mappedTVShow = (media: any) => {
 		firstAired: media.first_air_date,
 		genres: media.genre_ids,
 		poster: media.poster_path,
+		stars: media.vote_average,
 		type: media.media_type || 'tv',
 	};
 };

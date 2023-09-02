@@ -122,6 +122,22 @@
 		);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 );
 	}
+
+	.star-fill-first {
+		left: 0;
+	}
+	.star-fill-second {
+		left: 20px;
+	}
+	.star-fill-third {
+		left: 40px;
+	}
+	.star-fill-fourth {
+		left: 60px;
+	}
+	.star-fill-fifth {
+		left: 80px;
+	}
 }
 
 @keyframes loading-dot {

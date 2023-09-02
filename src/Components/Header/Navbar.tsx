@@ -28,6 +28,10 @@ const Navbar = () => {
 			id: 'My List',
 			link: 'my-list',
 		},
+		{
+			id: 'Test',
+			link: 'test'
+		}
 	];
 
 	const handleClick = () => {

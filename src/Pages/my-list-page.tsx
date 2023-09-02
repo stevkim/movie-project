@@ -4,7 +4,6 @@ import MediaCard from '../Components/Media-Card/MediaCard';
 import { motion } from 'framer-motion';
 import UserMediaCardWrapper from '../Components/Media-Card/UserMediaCardWrapper';
 import { Fragment } from 'react';
-import Loading from '../Utils/Components/Loading';
 
 const MyList = () => {
 	const userList = useAppSelector(userListState);
@@ -22,7 +21,6 @@ const MyList = () => {
 			initial={{ y: '100%', opacity: 0 }}
 			animate={{ y: '0', opacity: 1 }}
 		>
-				<Loading />
 			<div className="w-full flex flex-wrap my-4 justify-center">
 				<h1 className="w-full text-6xl text-center">Your Movie List</h1>
 				{movieList.map((media) => {

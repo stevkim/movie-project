@@ -8,13 +8,14 @@ import {
 import { useAppDispatch, useAppSelector } from '../../Utils/Hooks/hooks';
 import { addUserMedia } from '../../features/mediaSlice';
 import PlusToCheck from '../../Utils/Components/PlusToCheck';
+import StarRating from '../../Utils/Components/StarRating';
 
 interface Props {
 	media: IMediaInfo;
 }
 
 const CardFront = ({ media }: Props) => {
-	const { title, genres, description, releaseDate, firstAired, id, type } =
+	const { title, genres, description, releaseDate, firstAired, id, stars, type } =
 		media;
 
 	const genreKey =
@@ -35,23 +36,28 @@ const CardFront = ({ media }: Props) => {
 	};
 
 	return (
-		<>
-			<div className="w-full flex mb-2 items-center p-2">
+		<div className='p-4'>
+			<div className="w-full flex items-center">
 				<h2 className={`text-xl`}>
 					{title}
-					<small className="ml-2 text-gray-500">{type}</small>
 				</h2>
 				<div
 						onClick={(e) => {
 							e.stopPropagation();
 							handleAddMedia();
 						}}
-						className="ml-auto mr-2 text-2xl p-4 hover:scale-125"
+						className="ml-auto mr-2 text-2xl p-2 hover:scale-125"
 					>
 						<PlusToCheck isInList={checkId(userList, id)}/>
 					</div>
 			</div>
-			<p className="max-h-[50%] p-2 overflow-scroll text-xs">{description}</p>
+			<div className='flex flex-row items-center mb-2'>
+				<div title={`Average rating: ${stars}/10`} className='w-fit'>
+					<StarRating starRating={stars} />
+				</div>
+				<small className="ml-2 text-gray-500">{type}</small>
+			</div>
+			<p className="max-h-[50%] overflow-scroll text-[1rem]">{description}</p>
 
 			<ul className="mt-4 flex flex-wrap max-h-[20%]">
 				{genres.map((genre) => {
@@ -73,7 +79,7 @@ const CardFront = ({ media }: Props) => {
 					<> Pilot: {FormatDate(firstAired || '')} </>
 				)}
 			</p>
-		</>
+		</div>
 	);
 };
 

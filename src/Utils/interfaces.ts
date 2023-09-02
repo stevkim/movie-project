@@ -22,6 +22,7 @@ export interface IMediaInfo {
   description: string;
   releaseDate?: string;
   firstAired: string;
+  stars: number;
   type: Media;
 }
 
