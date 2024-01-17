@@ -1,7 +1,6 @@
 import { IMediaInfo, preferenceUpdate } from './interfaces';
 
-const token =
-	'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZmM1YzZkZDdkYjZmNGJkOTNiYTZlZjZiNjhhZDIwMCIsInN1YiI6IjY0NmZhMzYwMzM2ZTAxMDBjNzA3M2U4YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.L2ZR27UPnBwP6NlQYhuBt0uInuIUda_P4nuTK3sBL6o';
+const token = import.meta.env.VITE_API_TOKEN
 
 /* grabs a refresh token or alerts not authorized
   returns a string, if possible */
