@@ -28,10 +28,6 @@ const Navbar = () => {
 			id: 'My List',
 			link: 'my-list',
 		},
-		{
-			id: 'Test',
-			link: 'test'
-		}
 	];
 
 	const handleClick = () => {
@@ -42,7 +38,7 @@ const Navbar = () => {
 
 	return (
 		<div className="flex items-center h-[50px] boxshadow-bottom bg-white">
-			<Link to={'/'} className=" text-2xl w-auto p-4 flex items-center">Logo</Link>
+			<Link to={'/'} className=" text-2xl w-auto p-4 flex items-center">Moovi</Link>
 
 			<div className="mr-auto">
 				<ul className="flex">

@@ -15,8 +15,16 @@ interface Props {
 }
 
 const CardFront = ({ media }: Props) => {
-	const { title, genres, description, releaseDate, firstAired, id, stars, type } =
-		media;
+	const {
+		title,
+		genres,
+		description,
+		releaseDate,
+		firstAired,
+		id,
+		stars,
+		type,
+	} = media;
 
 	const genreKey =
 		media.type === 'movie'
@@ -36,35 +44,40 @@ const CardFront = ({ media }: Props) => {
 	};
 
 	return (
-		<div className='p-4'>
+		<div className="p-4 h-full">
 			<div className="w-full flex items-center">
-				<h2 className={`text-xl`}>
-					{title}
-				</h2>
+				<h2 className={`text-xl`}>{title}</h2>
 				<div
-						onClick={(e) => {
-							e.stopPropagation();
-							handleAddMedia();
-						}}
-						className="ml-auto mr-2 text-2xl p-2 hover:scale-125"
-					>
-						<PlusToCheck isInList={checkId(userList, id)}/>
-					</div>
-			</div>
-			<div className='flex flex-row items-center mb-2'>
-				<div title={`Average rating: ${stars}/10`} className='w-fit'>
-					<StarRating starRating={stars} />
+					onClick={(e) => {
+						e.stopPropagation();
+						handleAddMedia();
+					}}
+					className="ml-auto mr-2 text-2xl p-2 hover:scale-125"
+				>
+					<PlusToCheck isInList={checkId(userList, id)} />
 				</div>
+			</div>
+			<div className="flex flex-row items-center mb-2">
+				{stars ? (
+					<div
+						title={`Average rating: ${stars}/10`}
+						className="w-fit"
+					>
+						<StarRating starRating={stars} />
+					</div>
+				) : (
+					<>No rating</>
+				)}
 				<small className="ml-2 text-gray-500">{type}</small>
 			</div>
-			<p className="max-h-[50%] overflow-scroll text-[1rem]">{description}</p>
+			<p className="max-h-[60%] overflow-scroll text-[1rem]">{description}</p>
 
 			<ul className="mt-4 flex flex-wrap max-h-[20%]">
 				{genres.map((genre) => {
 					return (
 						<li
 							key={`${title},genre,${genre}`}
-							className="m-2 p-2 bg-white text-gray-600 text-[.6rem] rounded-sm w-fit"
+							className="m-2 p-2 bg-white text-gray-600 text-[1rem] rounded-sm w-fit border-2"
 						>
 							{getGenreName(genreKey, genre)}
 						</li>
@@ -72,7 +85,7 @@ const CardFront = ({ media }: Props) => {
 				})}
 			</ul>
 
-			<p className="absolute right-0 bottom-0 text-xs">
+			<p className="absolute right-[5px] bottom-0 text-[1rem]">
 				{media.type === 'movie' ? (
 					<> Premiered: {FormatDate(releaseDate || '')} </>
 				) : (

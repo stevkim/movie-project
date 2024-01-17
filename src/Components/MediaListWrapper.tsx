@@ -36,3 +36,4 @@ const MediaListWrapper = ({ sectionTitle, mediaList }: Props) => {
 };
 
 export default MediaListWrapper;
+ 

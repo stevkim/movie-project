@@ -28,8 +28,8 @@ const AccountPage = () => {
 	const deleteModalState = useAppSelector(DeleteModalState);
 	const genreChangeModalState = useAppSelector(genreModalState);
 
-	const userPreferredMovieGenres = useAppSelector(preferredMovieGenreState);
-	const userPreferredTVGenres = useAppSelector(preferredShowGenresState);
+	const userPreferredMovieGenres = useAppSelector(preferredMovieGenreState) || [];
+	const userPreferredTVGenres = useAppSelector(preferredShowGenresState) || [];
 	const dispatch = useAppDispatch();
 
 	const handleUpdate = (field: string) => {

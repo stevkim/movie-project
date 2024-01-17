@@ -17,6 +17,7 @@ export const handleRefresh = async () => {
 	} else {
 		alert(tokenResult.msg);
 	}
+	return;
 };
 
 /* grabs the list of genres available */

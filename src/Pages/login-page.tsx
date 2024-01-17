@@ -48,9 +48,9 @@ const Login = () => {
 	}
 
 	return (
-		<div className="m-w-[600px] mx-auto border-2 p-8 flex flex-col justify-center items-center bg-gradient">
+		<div className="m-w-[600px] h-[100vh] mx-auto border-2 p-8 flex flex-col items-center bg-gradient">
 			{loggedIn && <Navigate to={'/'} replace={true} />}
-			<div className="w-max mb-8">
+			<div className="w-max my-8">
 				<p className="text-center mx-auto text-6xl p-2 rounded-sm">Logo</p>
 			</div>
 			<div className="w-1/2 min-w-[400px] max-w-[600px] mx-auto border-2 border-gray-200 p-4 bg-white">

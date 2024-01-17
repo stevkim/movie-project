@@ -42,6 +42,7 @@ function App() {
 	const localLogin = window.localStorage.getItem('loggedIn');
 	const userID = window.localStorage.getItem('ID');
 
+	if (!localLogin || !userID) return <Navigate to='login' />
 
 	const dispatch = useAppDispatch();
 

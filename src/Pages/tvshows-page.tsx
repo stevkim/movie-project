@@ -54,6 +54,7 @@ const TVShows = () => {
 								sectionTitle={listItem.name}
 								mediaList={listItem.list}
 							/>
+							<br />
 						</Fragment>
 					);
 				})}

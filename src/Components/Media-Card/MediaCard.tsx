@@ -36,7 +36,7 @@ const MediaCard = ({ media }: Props) => {
 				<div
 					className={`${
 						hover ? 'translate-y-0 z-20' : 'translate-y-[100%] z-[2]'
-					} transition-all card-front bg-glassmorph`}
+					} transition-all card-front bg-white`}
 				>
 					<CardFront media={media} />
 				</div>

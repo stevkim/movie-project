@@ -43,7 +43,7 @@ const SignUp = () => {
 	}
 
 	return (
-		<div className="m-w-[600px] mx-auto border-2 p-8 bg-gradient">
+		<div className="m-w-[600px] h-[100vh] mx-auto border-2 p-8 bg-gradient">
 			<div className="w-full text-center mb-6">
 				<h1 className="text-6xl">Logo</h1>
 			</div>

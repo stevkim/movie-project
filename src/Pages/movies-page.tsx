@@ -55,6 +55,7 @@ const Movies = () => {
 								sectionTitle={listItem.name}
 								mediaList={listItem.list}
 							/>
+							<br />
 						</Fragment>
 					);
 				})}
